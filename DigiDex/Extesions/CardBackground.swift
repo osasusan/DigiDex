@@ -43,5 +43,5 @@ struct CardBackground_Previews: View {
 }
 
 #Preview {
-    CardBackground_Previews().ignoresSafeArea(.all)
+    CardBackground_Previews().ignoresSafeArea()
 }

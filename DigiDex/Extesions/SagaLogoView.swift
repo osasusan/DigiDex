@@ -41,22 +41,22 @@ struct SagaLogoView: View {
     }
 }
 
-extension Saga {
-    static let previewAdventure = Saga(
-        id: 1,
-        name: "Digimon Adventure",
-        season: 1,
-        logo: "logo_adventure",
-        year: 1999,
-        featured: []
-    )
-}
-#Preview {
-
-    VStack(spacing: 20) {
-        SagaLogoView(saga: .previewAdventure)
-    }
-    .padding()
-    .background(Color.digidexBorder)
-  
-}
+//extension Saga {
+//    static let previewAdventure = Saga(
+//        id: 1,
+//        name: "Digimon Adventure",
+//        season: 1,
+//        logo: "logo_adventure",
+//        year: 1999,
+//        featured: []
+//    )
+//}
+//#Preview {
+//
+//    VStack(spacing: 20) {
+//        SagaLogoView(saga: .previewAdventure)
+//    }
+//    .padding()
+//    .background(Color.digidexBorder)
+//  
+//}

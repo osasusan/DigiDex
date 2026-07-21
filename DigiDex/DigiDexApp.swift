@@ -19,7 +19,7 @@ struct DigiDexApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            mainTabView()
+            Root()
                 .environment(store)
                 .environment(favorites)
                 .preferredColorScheme(.dark)

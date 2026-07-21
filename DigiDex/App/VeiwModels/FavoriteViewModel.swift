@@ -22,14 +22,14 @@ import Foundation
     var favoriteDigimon : [Digimon] {
         store.allDigimon.filter{favoriteIDs.contains($0.id)}
     }
-    func isFavorite(id: Int) -> Bool {
-        favoriteIDs.contains(id)
+    func isFavorite(_ digimon: Digimon) -> Bool {
+        favoriteIDs.contains(digimon.id)
     }
-    func toggleFavorite(id: Int) {
-        if favoriteIDs.contains(id) {
-            favoriteIDs.remove(id)
+    func toggleFavorite(_ digimon: Digimon) {
+        if favoriteIDs.contains(digimon.id) {
+            favoriteIDs.remove(digimon.id)
         } else {
-            favoriteIDs.insert(id)
+            favoriteIDs.insert(digimon.id)
         }
         saveToDefaults()
     }

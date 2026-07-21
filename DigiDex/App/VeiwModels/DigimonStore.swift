@@ -19,7 +19,7 @@ import Foundation
     func load(){
         do {
             allDigimon = try JSONLoader.load([Digimon].self,from: "digimon")
-            sagas = try JSONLoader.load([Saga].self,from: "sagas")
+            sagas = try JSONLoader.load([Saga].self,from: "saga")
             loadErrors = nil
         }catch {
                 loadErrors = error.localizedDescription
