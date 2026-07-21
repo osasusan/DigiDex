@@ -8,6 +8,20 @@
 import Foundation
 import SwiftUI
 
+    /// Una saga de Digimon (Adventure, Adventure 02, Tamers, Frontier...).
+struct Saga: Codable, Identifiable, Hashable {
+    let id: Int
+    let name: String
+    let season: Int
+    let logo: String
+    let year: Int
+    let featured: [FeaturedDigimon]
+    
+        /// Los destacados ordenados por su campo `order`, listos para pintar en cascada.
+    var orderedFeatured: [FeaturedDigimon] {
+        featured.sorted { $0.order < $1.order }
+    }
+}
     /// Rol de un Digimon dentro de una saga: protagonista o antagonista.
     /// Determina el color del badge en la lista de destacados del Home.
 enum FeaturedRole: String, Codable {
@@ -38,20 +52,7 @@ struct FeaturedDigimon: Codable, Hashable {
     let order: Int
 }
 
-    /// Una saga de Digimon (Adventure, Adventure 02, Tamers, Frontier...).
-struct Saga: Codable, Identifiable, Hashable {
-    let id: Int
-    let name: String
-    let season: Int
-    let logo: String
-    let year: Int
-    let featured: [FeaturedDigimon]
-    
-        /// Los destacados ordenados por su campo `order`, listos para pintar en cascada.
-    var orderedFeatured: [FeaturedDigimon] {
-        featured.sorted { $0.order < $1.order }
-    }
-}
+
 
     /// Color de acento lateral por saga. No viene en el JSON porque es puramente
     /// visual, así que lo resolvemos aquí a partir del `id` de la saga.
@@ -59,11 +60,11 @@ struct Saga: Codable, Identifiable, Hashable {
 extension Saga {
     var accentColor: Color {
         switch id {
-        case 1: return Color.digidexBlue
-        case 2: return Color.digidexAmber
-        case 3: return Color.digidexRed
-        case 4: return Color.digidexGreen
-        default: return Color.digidexBlue
+        case 1: return .digidexBlue
+        case 2: return .digidexAmber
+        case 3: return .digidexRed
+        case 4: return .digidexGreen
+        default: return .digidexBlue
         }
     }
 }
