@@ -9,17 +9,21 @@ import SwiftUI
 
 struct SagaLogoView: View {
     let saga: Saga
-    var height: CGFloat = 44
+    var height: CGFloat = 52
+    
     
     var body: some View {
         Group {
             if UIImage(named: saga.logo) != nil {
-                HStack(spacing: 10){
-                    Image(saga.logo)
-                        .resizable()
-                        .scaledToFit()
-                    
-                    Spacer()
+                HStack(spacing: 20){
+                    VStack{
+                        Image(saga.logo)
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    .padding(10)
+                    .frame(width: 80, height: 80)
+                   
                     
                     Text(saga.name)
                         .font(.headline)
@@ -27,7 +31,7 @@ struct SagaLogoView: View {
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
                         //.padding(.trailing,20)
-                    
+                    Spacer()
                 }
             } else {
                 Text(saga.name)
@@ -40,7 +44,19 @@ struct SagaLogoView: View {
         .frame(height: height)
     }
 }
-
+#Preview {
+    
+    ZStack() {
+        Color.digidexBackground.ignoresSafeArea()
+        VStack(spacing: 20) {
+            SagaLogoView(saga: .previewAdventure)
+        }
+        .background(Color.digidexBorder)
+    }
+   
+    
+}
+#if DEBUG
 extension Saga {
     static let previewAdventure = Saga(
         id: 1,
@@ -51,12 +67,4 @@ extension Saga {
         featured: []
     )
 }
-#Preview {
-
-    VStack(spacing: 20) {
-        SagaLogoView(saga: .previewAdventure)
-    }
-    .padding()
-    .background(Color.digidexBorder)
-  
-}
+#endif

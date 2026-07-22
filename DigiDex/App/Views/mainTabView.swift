@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct mainTabView: View {
-    @Environment(DigimonStore.self) private var sotre
+    @Environment(DigimonStore.self) private var store
     @State private var tabSelection:AppTab = .home
     
     var body: some View {
@@ -16,7 +16,7 @@ struct mainTabView: View {
             Group{
                 switch tabSelection {
                     case .home:
-                        HomeView()
+                    HomeView(store: store)
                     case .digidex:
                         DigiDexView()
                     case .favorites:

@@ -52,8 +52,6 @@ struct FeaturedDigimon: Codable, Hashable {
     let order: Int
 }
 
-
-
     /// Color de acento lateral por saga. No viene en el JSON porque es puramente
     /// visual, así que lo resolvemos aquí a partir del `id` de la saga.
     /// El orden fijo es: Adventure = azul, Adventure 02 = ámbar, Tamers = rojo, Frontier = verde.
