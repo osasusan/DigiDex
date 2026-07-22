@@ -14,7 +14,7 @@ struct SagaCardView: View {
     let onTap: () -> Void
     
     var body: some View {
-        HStack(spacing: 0) {
+        ZStack(alignment:.leading) {
                 // Acento lateral: distingue cada saga a simple vista (azul, ámbar, rojo, verde).
             Rectangle()
                 .fill(saga.accentColor)
@@ -39,14 +39,15 @@ struct SagaCardView: View {
             HStack(spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack{
-                        SagaLogoView(saga: saga, height: 26)
+                        SagaLogoView(saga: saga, height: 24)
                         
                             .font(.headline)
                             .foregroundStyle(Color.digidexBlue)
                     }
+                    Spacer()
                     Text("Temporada \(saga.season) · \(String(saga.year))")
                         .font(.caption)
-                        .foregroundStyle(Color.digidexTextSecondary)
+                        .foregroundStyle(.digidexTextSecondary)
                 }
                 
                 Spacer()

@@ -24,10 +24,10 @@ struct HomeView: View {
                             isExpanded: viewModel.isExpanded(saga: saga),
                             featuredEntries: viewModel.featuredEntries(for: saga),
                             onTap: {
-                                
+                                withAnimation(.spring()) {
                                     viewModel.toggle(saga: saga)
-                                    
-                                
+                                }
+                                  
                             }
                         )
                     }

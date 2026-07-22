@@ -13,11 +13,11 @@ struct CardBackground: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .background(Color.digidexCard)
+            .background(Color.digidexSurface)
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .stroke(Color.digidexBorder, lineWidth: 0.5)
+                    .stroke(Color.digidexBorder, lineWidth: 0.7)
             )
     }
 }
@@ -31,13 +31,10 @@ extension View {
 struct CardBackground_Previews: View {
 
     var body: some View {
-       
         VStack{
-           
             Rectangle()
                 .digidexCardStyle()
                 .foregroundStyle(Color.digidexBorder)
-            
         }
     }
 }

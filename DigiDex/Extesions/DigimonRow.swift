@@ -42,37 +42,37 @@ struct DigimonRow: View {
         .digidexCardStyle(cornerRadius: cornerRadius)
     }
 }
-
-//extension Digimon {
-//    static let previews = Digimon(
-//        id: 3,
-//        name: "Agumon",
-//        level: .rookie,
-//        attribute: .vaccine,
-//        type: "Reptile",
-//        description: "Pequeño Digimon reptil con gran potencial evolutivo.",
-//        image: "agumon",
-//        weaknesses: ["Virus", "Agua"],
-//        evolvesFrom: ["Koromon"],
-//        evolvesTo: ["Greymon"]
-//    )
-//}
-//
-//#Preview {
-//    ZStack {
-//        
-//        Color.digidexBackground.ignoresSafeArea()
-//        VStack(spacing: 10) {
-//                // Caso 1: lista DigiDex (sin rol)
-//            DigimonRow(digimon: .previews)
-//            
-//                // Caso 2: Home saga protagonista
-//            DigimonRow(digimon: .previews, showRole: .protagonist, imageSize: 40)
-//            
-//                // Caso 3: Home saga antagonista
-//            DigimonRow(digimon: .previews, showRole: .antagonist, imageSize: 40)
-//        }
-//        .padding()
-//        .background(Color.digidexBackground)
-//    }
-//}
+#if DEBUG
+extension Digimon {
+    static let previews = Digimon(
+        id: 3,
+        name: "Agumon",
+        level: .rookie,
+        attribute: .vaccine,
+        type: "Reptile",
+        description: "Pequeño Digimon reptil con gran potencial evolutivo.",
+        image: "agumon",
+        weaknesses: ["Virus", "Agua"],
+        evolvesFrom: ["Koromon"],
+        evolvesTo: ["Greymon"]
+    )
+}
+#endif
+#Preview {
+    ZStack {
+        
+        Color.digidexBackground.ignoresSafeArea()
+        VStack(spacing: 10) {
+                // Caso 1: lista DigiDex (sin rol)
+            DigimonRow(digimon: .previews)
+            
+                // Caso 2: Home saga protagonista
+            DigimonRow(digimon: .previews, showRole: .protagonist, imageSize: 40)
+            
+                // Caso 3: Home saga antagonista
+            DigimonRow(digimon: .previews, showRole: .antagonist, imageSize: 40)
+        }
+        .padding()
+        .background(Color.digidexCard)
+    }
+}

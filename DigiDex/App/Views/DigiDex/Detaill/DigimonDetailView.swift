@@ -24,10 +24,10 @@ struct DigimonDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
-                imageHeader
-                badgesRow
-                descriptionSection
-                weaknessesSection
+                imageHeader()
+                badgesRow()
+                descriptionSection()
+                weaknessesSection()
                 
                 if !preEvolution.isEmpty {
                     evolutionSection(title: "Evolución previa", digimons: preEvolution)
@@ -53,7 +53,7 @@ struct DigimonDetailView: View {
         }
     }
     
-    private var imageHeader: some View {
+    private func imageHeader() ->  some View {
         HStack {
             Spacer()
             DigimonImageView(digimon: digimon, size: 180, cornerRadius: 16)
@@ -61,7 +61,7 @@ struct DigimonDetailView: View {
         }
     }
     
-    private var badgesRow: some View {
+    private  func badgesRow() -> some View {
         HStack(spacing: 8) {
             BadgeView(text: digimon.level.rawValue, color: digimon.level.badgeColor)
             BadgeView(text: digimon.attribute.rawValue, color: digimon.attribute.badgeColor)
@@ -69,7 +69,7 @@ struct DigimonDetailView: View {
         }
     }
     
-    private var descriptionSection: some View {
+    private func descriptionSection() ->  some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(digimon.type.uppercased())
                 .font(.caption.weight(.semibold))
@@ -87,16 +87,17 @@ struct DigimonDetailView: View {
         }
     }
     
-    private var weaknessesSection: some View {
+    private func weaknessesSection() ->  some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Debilidades")
                 .font(.headline)
                 .foregroundStyle(.white)
             
-          
+            HStack{
                 ForEach(digimon.weaknesses, id: \.self) { weakness in
                     PillView(text: weakness)
                 }
+            }
         }
     }
     
