@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CryptoKit
+
 
 @MainActor
 @Observable final class AuntentificacionViewModel {
@@ -118,10 +118,7 @@ import CryptoKit
         guard let data = try? JSONEncoder().encode(user) else {return}
         UserDefaults.standard.set(data, forKey: userDefultsKey)
     }
-//    private func saveRegisteredUsers(_ users: [String: UserProfile]) {
-//        guard let data = try? JSONEncoder().encode(users) else { return }
-//        UserDefaults.standard.set(data, forKey: userDefultsKey)
-//    }
+    
     private static func hash(_ text: String) -> String {
         "\(text.hashValue)"
     }
