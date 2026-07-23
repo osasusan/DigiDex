@@ -1,0 +1,708 @@
+[
+    {
+        "id": 1,
+        "name": "Botamon",
+        "level": "Fresh",
+        "attribute": "Vaccine",
+        "type": "Slime",
+        "description": "Digimon bebé recién nacido del Digi-Huevo. Apenas puede moverse, pero ya guarda en su interior todo el potencial evolutivo de Agumon.",
+        "image": "botamon",
+        "weaknesses": [
+            "Virus"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": [
+            "Koromon"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Koromon",
+        "level": "In-Training",
+        "attribute": "Vaccine",
+        "type": "Mammal",
+        "description": "Pequeña bola rosada muy activa y juguetona. Le encanta dar saltos y ya muestra el carácter valiente que tendrá como Agumon.",
+        "image": "koromon",
+        "weaknesses": [
+            "Virus",
+            "Agua"
+        ],
+        "evolvesFrom": [
+            "Botamon"
+        ],
+        "evolvesTo": [
+            "Agumon"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Agumon",
+        "level": "Rookie",
+        "attribute": "Vaccine",
+        "type": "Reptile",
+        "description": "Pequeño Digimon reptil con gran potencial evolutivo y conocido por su valentía.",
+        "image": "agumon",
+        "weaknesses": [
+            "Virus",
+            "Agua"
+        ],
+        "evolvesFrom": [
+            "Koromon"
+        ],
+        "evolvesTo": [
+            "Greymon"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Greymon",
+        "level": "Champion",
+        "attribute": "Vaccine",
+        "type": "Dinosaur",
+        "description": "Evolución de Agumon. Un dinosaurio acorazado de gran fuerza física cuyo Nova Fire puede reducir a cenizas a su enemigo.",
+        "image": "greymon",
+        "weaknesses": [
+            "Virus",
+            "Hielo"
+        ],
+        "evolvesFrom": [
+            "Agumon"
+        ],
+        "evolvesTo": [
+            "MetalGreymon"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "MetalGreymon",
+        "level": "Ultimate",
+        "attribute": "Vaccine",
+        "type": "Cyborg",
+        "description": "La mitad de su cuerpo ha sido reconstruida con piezas cibernéticas tras una dura batalla, lo que le otorga el Giga Destructor.",
+        "image": "metalgreymon",
+        "weaknesses": [
+            "Virus",
+            "Datos corruptos"
+        ],
+        "evolvesFrom": [
+            "Greymon"
+        ],
+        "evolvesTo": [
+            "WarGreymon"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "WarGreymon",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Dragon Warrior",
+        "description": "Forma Mega de Agumon y uno de los Digimon más poderosos que existen. Sus Garras Terra Force pueden atravesar cualquier defensa.",
+        "image": "wargreymon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "MetalGreymon"
+        ],
+        "evolvesTo": [
+            "Omegamon"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Gabumon",
+        "level": "Rookie",
+        "attribute": "Data",
+        "type": "Reptile",
+        "description": "Digimon reptil tímido que viste una piel de Garurumon. Leal y protector con quienes se gana su confianza.",
+        "image": "gabumon",
+        "weaknesses": [
+            "Data",
+            "Fuego"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": [
+            "Garurumon"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Garurumon",
+        "level": "Champion",
+        "attribute": "Data",
+        "type": "Animal",
+        "description": "Evolución de Gabumon. Un lobo azulado y veloz como el rayo, capaz de congelar a su objetivo con su Aullido de Hielo.",
+        "image": "garurumon",
+        "weaknesses": [
+            "Data",
+            "Fuego"
+        ],
+        "evolvesFrom": [
+            "Gabumon"
+        ],
+        "evolvesTo": [
+            "WereGarurumon"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "WereGarurumon",
+        "level": "Ultimate",
+        "attribute": "Data",
+        "type": "Beast Man",
+        "description": "Un hombre lobo ágil y silencioso que combina fuerza bruta con una velocidad extrema en combate cuerpo a cuerpo.",
+        "image": "weregarurumon",
+        "weaknesses": [
+            "Data",
+            "Luz"
+        ],
+        "evolvesFrom": [
+            "Garurumon"
+        ],
+        "evolvesTo": [
+            "MetalGarurumon"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "MetalGarurumon",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Cyborg",
+        "description": "Forma Mega de Gabumon. Un lobo mecánico gélido que dispara misiles Giga desde los cañones instalados en su lomo.",
+        "image": "metalgarurumon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "WereGarurumon"
+        ],
+        "evolvesTo": [
+            "Omegamon"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Patamon",
+        "level": "Rookie",
+        "attribute": "Vaccine",
+        "type": "Mammal",
+        "description": "Pequeño Digimon volador de orejas enormes que usa como alas. Compañero de TK, siempre alegre y protector.",
+        "image": "patamon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 12,
+        "name": "Gatomon",
+        "level": "Rookie",
+        "attribute": "Vaccine",
+        "type": "Beast",
+        "description": "Digimon felino ágil y de carácter fuerte, compañera de Kari. Lleva una cola con un anillo sagrado.",
+        "image": "gatomon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 13,
+        "name": "Veemon",
+        "level": "Rookie",
+        "attribute": "Vaccine",
+        "type": "Reptile",
+        "description": "Digimon reptil azul, torpe pero valiente, compañero de Daisuke en Digimon Adventure 02. Con el Digimental dorado alcanza su forma Mega.",
+        "image": "veemon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": [
+            "Magnamon"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Magnamon",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Armored Warrior",
+        "description": "Evolución Mega de Veemon a través del Digimental de los Milagros. Su armadura dorada resiste casi cualquier ataque, y su Magna Blast decide batallas enteras.",
+        "image": "magnamon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "Veemon"
+        ],
+        "evolvesTo": [
+            "UlforceVeedramon"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Devimon",
+        "level": "Champion",
+        "attribute": "Virus",
+        "type": "Fallen Angel",
+        "description": "Ángel caído que dominó File Island bajo un manto de oscuridad. Su Toque de la Muerte es letal para cualquier Digimon débil.",
+        "image": "devimon",
+        "weaknesses": [
+            "Luz",
+            "Vaccine"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 16,
+        "name": "Myotismon",
+        "level": "Ultimate",
+        "attribute": "Virus",
+        "type": "Vampire",
+        "description": "Vampiro Digimon elegante y cruel que gobierna en las sombras. Su Grisly Wing puede debilitar en un instante a sus enemigos.",
+        "image": "myotismon",
+        "weaknesses": [
+            "Luz",
+            "Fuego"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 17,
+        "name": "Guilmon",
+        "level": "Rookie",
+        "attribute": "Virus",
+        "type": "Reptile",
+        "description": "Digimon reptil de aspecto feroz pero corazón noble, nacido del dibujo de un niño gracias al poder de un D-Power.",
+        "image": "guilmon",
+        "weaknesses": [
+            "Vaccine",
+            "Agua"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": [
+            "Growlmon"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Growlmon",
+        "level": "Champion",
+        "attribute": "Virus",
+        "type": "Dragon",
+        "description": "Evolución de Guilmon. Un dragón bípedo con mandíbulas capaces de morder el acero y un rugido que paraliza al enemigo.",
+        "image": "growlmon",
+        "weaknesses": [
+            "Vaccine",
+            "Agua"
+        ],
+        "evolvesFrom": [
+            "Guilmon"
+        ],
+        "evolvesTo": [
+            "WarGrowlmon"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "WarGrowlmon",
+        "level": "Ultimate",
+        "attribute": "Virus",
+        "type": "Dragon",
+        "description": "Forma acorazada de Growlmon, cubierta de placas de metal virtual. Su Aliento Atómico arrasa con todo a su paso.",
+        "image": "wargrowlmon",
+        "weaknesses": [
+            "Vaccine",
+            "Hielo"
+        ],
+        "evolvesFrom": [
+            "Growlmon"
+        ],
+        "evolvesTo": [
+            "Gallantmon"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Gallantmon",
+        "level": "Mega",
+        "attribute": "Virus",
+        "type": "Holy Knight",
+        "description": "Forma Mega de Guilmon fusionado con su Tamer. Caballero real cubierto por la Sagrada Armadura Chrome Digizoid, empuña la lanza Gram y el escudo Aegis.",
+        "image": "gallantmon",
+        "weaknesses": [
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "WarGrowlmon"
+        ],
+        "evolvesTo": []
+    },
+    {
+        "id": 21,
+        "name": "Terriermon",
+        "level": "Rookie",
+        "attribute": "Vaccine",
+        "type": "Beast",
+        "description": "Pequeño Digimon con forma de perro y orejas enormes que usa como propulsores. Bromista pero muy leal a su compañero.",
+        "image": "terriermon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": [
+            "Gargomon"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Gargomon",
+        "level": "Champion",
+        "attribute": "Vaccine",
+        "type": "Beast Man",
+        "description": "Evolución de Terriermon. Sus brazos se transforman en ametralladoras Gatling capaces de disparar sin descanso.",
+        "image": "gargomon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "Terriermon"
+        ],
+        "evolvesTo": [
+            "Rapidmon"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Rapidmon",
+        "level": "Ultimate",
+        "attribute": "Vaccine",
+        "type": "Cyborg",
+        "description": "Evolución de Gargomon. Ágil, rápido y letal a distancia, sus misiles Rapid Fire persiguen al objetivo hasta impactar.",
+        "image": "rapidmon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "Gargomon"
+        ],
+        "evolvesTo": [
+            "MegaGargomon"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "MegaGargomon",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Holy Knight",
+        "description": "Forma Mega de Terriermon fusionado con su Tamer. Un titán acorazado con arsenal completo de misiles y torretas, capaz de arrasar campos de batalla enteros.",
+        "image": "megagargomon",
+        "weaknesses": [
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "Rapidmon"
+        ],
+        "evolvesTo": []
+    },
+    {
+        "id": 25,
+        "name": "Renamon",
+        "level": "Rookie",
+        "attribute": "Data",
+        "type": "Beast",
+        "description": "Digimon zorro elegante y solitario, especializado en técnicas de combate rápidas y precisas como el Diamond Storm.",
+        "image": "renamon",
+        "weaknesses": [
+            "Vaccine",
+            "Fuego"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": [
+            "Kyubimon"
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Kyubimon",
+        "level": "Champion",
+        "attribute": "Data",
+        "type": "Mystic Beast",
+        "description": "Evolución de Renamon. Un zorro de nueve colas envuelto en llamas azules, tan veloz que apenas se le ve moverse.",
+        "image": "kyubimon",
+        "weaknesses": [
+            "Vaccine",
+            "Fuego"
+        ],
+        "evolvesFrom": [
+            "Renamon"
+        ],
+        "evolvesTo": [
+            "Taomon"
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Taomon",
+        "level": "Ultimate",
+        "attribute": "Data",
+        "type": "Wizard",
+        "description": "Evolución de Kyubimon. Hechicera mística vestida con túnicas sagradas, ataca con pergaminos de talismanes que sellan a sus enemigos.",
+        "image": "taomon",
+        "weaknesses": [
+            "Vaccine",
+            "Fuego"
+        ],
+        "evolvesFrom": [
+            "Kyubimon"
+        ],
+        "evolvesTo": [
+            "Sakuyamon"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Sakuyamon",
+        "level": "Mega",
+        "attribute": "Data",
+        "type": "Holy Knight",
+        "description": "Forma Mega de Renamon fusionada con su Tamer. Sacerdotisa guerrera cubierta por una armadura sagrada, invoca cuatro espíritus zorro que defienden y atacan a su voluntad.",
+        "image": "sakuyamon",
+        "weaknesses": [
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "Taomon"
+        ],
+        "evolvesTo": []
+    },
+    {
+        "id": 29,
+        "name": "Agunimon",
+        "level": "Champion",
+        "attribute": "Vaccine",
+        "type": "Hybrid",
+        "description": "Guerrero legendario nacido del Espíritu Humano del Fuego. Combate cuerpo a cuerpo envuelto en llamas.",
+        "image": "agunimon",
+        "weaknesses": [
+            "Agua",
+            "Virus"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 30,
+        "name": "Lobomon",
+        "level": "Champion",
+        "attribute": "Vaccine",
+        "type": "Hybrid",
+        "description": "Guerrero legendario nacido del Espíritu Humano de la Luz. Lucha con dos sables láser con una disciplina samurái.",
+        "image": "lobomon",
+        "weaknesses": [
+            "Oscuridad",
+            "Virus"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 31,
+        "name": "Kazemon",
+        "level": "Champion",
+        "attribute": "Vaccine",
+        "type": "Hybrid",
+        "description": "Guerrera legendaria nacida del Espíritu Humano del Viento. Rápida y acrobática, casi imposible de alcanzar en combate.",
+        "image": "kazemon",
+        "weaknesses": [
+            "Virus",
+            "Hielo"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 32,
+        "name": "Beetlemon",
+        "level": "Champion",
+        "attribute": "Data",
+        "type": "Hybrid",
+        "description": "Guerrero legendario nacido del Espíritu Humano del Trueno. Su Thunder Fist golpea con la fuerza de un rayo.",
+        "image": "beetlemon",
+        "weaknesses": [
+            "Vaccine",
+            "Tierra"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 33,
+        "name": "Kumamon",
+        "level": "Champion",
+        "attribute": "Data",
+        "type": "Hybrid",
+        "description": "Guerrero legendario nacido del Espíritu Humano del Hielo. Pequeño pero resistente, ataca con bolas de nieve heladas.",
+        "image": "kumamon",
+        "weaknesses": [
+            "Vaccine",
+            "Fuego"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 34,
+        "name": "Grumblemon",
+        "level": "Champion",
+        "attribute": "Virus",
+        "type": "Hybrid",
+        "description": "Portador corrupto del Espíritu de la Tierra. Ataca desde bajo tierra con su enorme martillo de piedra.",
+        "image": "grumblemon",
+        "weaknesses": [
+            "Vaccine",
+            "Agua"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 35,
+        "name": "Cherubimon",
+        "level": "Ultimate",
+        "attribute": "Virus",
+        "type": "Beast Angel",
+        "description": "Antiguo guardián de los Diez Guerreros Legendarios, corrompido por la oscuridad hasta convertirse en el gran antagonista de Frontier.",
+        "image": "cherubimon",
+        "weaknesses": [
+            "Vaccine",
+            "Luz"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 36,
+        "name": "Omegamon",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Holy Knight",
+        "description": "Fusión de WarGreymon y MetalGarurumon en un único guerrero. Su Garra Gaia y su Cañón Frío Trascendental lo convierten en uno de los Digimon más temidos.",
+        "image": "omegamon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "WarGreymon",
+            "MetalGarurumon"
+        ],
+        "evolvesTo": []
+    },
+    {
+        "id": 37,
+        "name": "Alphamon",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Holy Knight",
+        "description": "Uno de los Caballeros Reales, un Digimon legendario y ancestral que solo aparece cuando el equilibrio del Mundo Digital está en verdadero peligro.",
+        "image": "alphamon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 38,
+        "name": "UlforceVeedramon",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Holy Knight",
+        "description": "Caballero Real evolucionado desde Magnamon. El más veloz de los Trece Caballeros, su Ulforce Saber puede cortar el tiempo mismo.",
+        "image": "ulforceveedramon",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "Magnamon"
+        ],
+        "evolvesTo": []
+    },
+    {
+        "id": 39,
+        "name": "Imperialdramon Paladin Mode",
+        "level": "Mega",
+        "attribute": "Vaccine",
+        "type": "Holy Knight",
+        "description": "Forma paladín de Imperialdramon tras recibir la espada Omega. Considerado el líder espiritual de los Caballeros Reales por su nobleza y poder equilibrado.",
+        "image": "imperialdramon_pm",
+        "weaknesses": [
+            "Virus",
+            "Oscuridad"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 40,
+        "name": "Dukemon",
+        "level": "Mega",
+        "attribute": "Virus",
+        "type": "Holy Knight",
+        "description": "Variante japonesa de Gallantmon, uno de los Caballeros Reales. Portador de la lanza Gram y el escudo Aegis, símbolo del honor caballeresco.",
+        "image": "dukemon",
+        "weaknesses": [
+            "Oscuridad"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 41,
+        "name": "Craniamon",
+        "level": "Mega",
+        "attribute": "Virus",
+        "type": "Holy Knight",
+        "description": "Caballero Real de defensa impenetrable. Su lanza Claíomh Solais y su escudo Aegis lo convierten en el guardián más resistente de los Trece.",
+        "image": "craniamon",
+        "weaknesses": [
+            "Luz"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    },
+    {
+        "id": 42,
+        "name": "Dynasmon",
+        "level": "Mega",
+        "attribute": "Data",
+        "type": "Holy Knight",
+        "description": "Caballero Real dragón. Su Dragon Roar libera la energía de los diez dragones legendarios en un ataque devastador.",
+        "image": "dynasmon",
+        "weaknesses": [
+            "Vaccine"
+        ],
+        "evolvesFrom": [],
+        "evolvesTo": []
+    }
+]

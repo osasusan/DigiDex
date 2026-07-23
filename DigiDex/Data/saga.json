@@ -1,0 +1,67 @@
+
+[
+    {
+        "id": 1,
+        "name": "Digimon Adventure",
+        "season": 1,
+        "logo": "logo_adventure",
+        "year": 1999,
+        "featured": [
+            { "digimonId": 3,  "role": "protagonist", "order": 1 },
+            { "digimonId": 6,  "role": "protagonist", "order": 2 },
+            { "digimonId": 7,  "role": "protagonist", "order": 3 },
+            { "digimonId": 10, "role": "protagonist", "order": 4 },
+            { "digimonId": 11, "role": "protagonist", "order": 5 },
+            { "digimonId": 12, "role": "protagonist", "order": 6 },
+            { "digimonId": 15, "role": "antagonist",  "order": 7 },
+            { "digimonId": 16, "role": "antagonist",  "order": 8 }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Digimon Adventure 02",
+        "season": 2,
+        "logo": "logo_adventure02",
+        "year": 2000,
+        "featured": [
+            { "digimonId": 13, "role": "protagonist", "order": 1 },
+            { "digimonId": 14, "role": "protagonist", "order": 2 },
+            { "digimonId": 3,  "role": "protagonist", "order": 3 },
+            { "digimonId": 7,  "role": "protagonist", "order": 4 },
+            { "digimonId": 11, "role": "protagonist", "order": 5 },
+            { "digimonId": 12, "role": "protagonist", "order": 6 },
+            { "digimonId": 16, "role": "antagonist",  "order": 7 }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Digimon Tamers",
+        "season": 3,
+        "logo": "logo_tamers",
+        "year": 2001,
+        "featured": [
+            { "digimonId": 17, "role": "protagonist", "order": 1 },
+            { "digimonId": 20, "role": "protagonist", "order": 2 },
+            { "digimonId": 21, "role": "protagonist", "order": 3 },
+            { "digimonId": 24, "role": "protagonist", "order": 4 },
+            { "digimonId": 25, "role": "protagonist", "order": 5 },
+            { "digimonId": 28, "role": "protagonist", "order": 6 }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Digimon Frontier",
+        "season": 4,
+        "logo": "logo_frontier",
+        "year": 2002,
+        "featured": [
+            { "digimonId": 29, "role": "protagonist", "order": 1 },
+            { "digimonId": 30, "role": "protagonist", "order": 2 },
+            { "digimonId": 31, "role": "protagonist", "order": 3 },
+            { "digimonId": 32, "role": "protagonist", "order": 4 },
+            { "digimonId": 33, "role": "protagonist", "order": 5 },
+            { "digimonId": 34, "role": "antagonist",  "order": 6 },
+            { "digimonId": 35, "role": "antagonist",  "order": 7 }
+        ]
+    }
+]
