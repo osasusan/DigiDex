@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Environment(AuntentificacionViewModel.self) private var viewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button("lodout") {
+                viewModel.logout()
+            }
+            .buttonStyle(DigidexPrimaryButtonStyle())
+        }
     }
 }
 
