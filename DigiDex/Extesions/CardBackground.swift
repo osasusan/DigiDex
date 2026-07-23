@@ -33,9 +33,11 @@ struct CardBackground_Previews: View {
     var body: some View {
         VStack{
             Rectangle()
+                .stroke(.digidexCard, lineWidth: 20)
                 .digidexCardStyle()
-                .foregroundStyle(Color.digidexBorder)
+                
         }
+        .padding()
     }
 }
 

@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct Root: View {
-    
+    @Environment(AuntentificacionViewModel.self) private var auntVM
     @State private var isShowingSplash = true
     
     var body: some View {
         Group {
             if isShowingSplash {
                 SplashView(isShowing: $isShowingSplash)
-            }else {
+            }  else if auntVM.isAuthenticated {
                 mainTabView()
+               
+            }else {
+                AuthContenVeiw()
             }
         }
     }
