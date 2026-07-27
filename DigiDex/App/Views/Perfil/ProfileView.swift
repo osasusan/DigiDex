@@ -85,6 +85,7 @@ struct ProfileView: View {
                 .foregroundStyle(.digidexRed)
             }
             .navigationTitle("Perfil")
+            .background(.digidexBackground)
         }
     }
     var imageAvtar: some View {
