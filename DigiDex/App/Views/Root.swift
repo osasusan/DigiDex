@@ -15,10 +15,9 @@ struct Root: View {
         Group {
             if isShowingSplash {
                 SplashView(isShowing: $isShowingSplash)
-            }  else if auntVM.isAuthenticated {
+            }else if auntVM.isAuthenticated {
                 mainTabView()
-               
-            }else {
+            }else{
                 AuthContenVeiw()
             }
         }
