@@ -16,17 +16,15 @@ struct mainTabView: View {
             Group{
                 switch tabSelection {
                 case .home:
-                    HomeView()
-                        .environment(HomeViewModel(store: store))
+                    HomeView(store: store)
                 case .digidex:
                     DigiDexView()
                         .environment(DigiDexViewModel(store: store))
                 case .favorites:
                     FavoritesView()
-                        .environment(FavoriteViewModel(store: store))
                 case .profile:
                     ProfileView()
-                        .environment(AuntentificacionViewModel())
+                      
                 }
                 
             }

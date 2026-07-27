@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Environment(HomeViewModel.self) private var viewModel
+    @State private var viewModel : HomeViewModel
+    
+    init(store:DigimonStore){
+        
+        _viewModel = State(initialValue: HomeViewModel(store: store))
+    }
+
   
     var body: some View {
         NavigationStack{
