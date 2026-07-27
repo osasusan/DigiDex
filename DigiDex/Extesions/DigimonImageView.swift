@@ -41,4 +41,7 @@ struct DigimonImageView: View {
     }
 }
 
+#Preview {
+    DigimonImageView(digimon: .previews)
+}
 

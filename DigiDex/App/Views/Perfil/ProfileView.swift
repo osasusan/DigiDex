@@ -33,11 +33,11 @@ struct ProfileView: View {
                         
                         ProfileOptionCard(title: "Cambiar nombre", isExpanded: $edidtName) {
                             VStack(spacing: 10) {
-                                TextField("Nuevo nombre",text: $newPassword)
+                                TextField("Nuevo nombre",text: $newUsername)
                                     .textFieldStyle(DigidexTextFieldStyle())
                                 Button {
                                     viewModel.updateProfile(username: newUsername)
-                                    newPassword = ""
+                                    newUsername = ""
                                     edidtName.toggle()
                                     
                                 } label: {
@@ -52,7 +52,7 @@ struct ProfileView: View {
                             VStack(spacing: 10) {
                                 SecureField("Nueva contraseña",text: $newPassword)
                                     .textFieldStyle(DigidexTextFieldStyle())
-                                SecureField("Nueva contraseña",text: $confirmPassword)
+                                SecureField("Confirmar contraseña",text: $confirmPassword)
                                     .textFieldStyle(DigidexTextFieldStyle())
                                 
                                 if let errorPass {
@@ -114,18 +114,18 @@ struct ProfileView: View {
                 imageAvtar
             }
             .onChange(of: photoSelect) { _, newItem in
-                Task {
+                Task { @MainActor in
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
                         viewModel.updateProfile(profileImageData: data)
                     }
                 }
             }
             
-            Text(viewModel.currentUser?.username ?? "")
+            Text(viewModel.currentUser?.username ?? "pepito grillo")
                 .font(.title3.bold())
                 .foregroundStyle(.white)
             
-            Text(viewModel.currentUser?.email ?? "")
+            Text(viewModel.currentUser?.email ?? "digimon@Digidex.com")
                 .font(.caption)
                 .fontWeight(.semibold)
                 .foregroundStyle(.digidexTextSecondary)

@@ -12,12 +12,14 @@ struct DigiDexApp: App {
     @State private var store:DigimonStore
     @State private var favorites :FavoriteViewModel
     @State private var isAuthorized:AuntentificacionViewModel
+    @State private var home :HomeViewModel
     
     init() {
         let store = DigimonStore()
         _store = State(initialValue: store)
         _favorites = State(initialValue: FavoriteViewModel(store: store))
         _isAuthorized = State(initialValue: AuntentificacionViewModel())
+        _home = State(initialValue: HomeViewModel(store: store))
     }
     var body: some Scene {
         WindowGroup {

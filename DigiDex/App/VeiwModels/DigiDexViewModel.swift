@@ -10,12 +10,9 @@ import Observation
 
 @MainActor
 @Observable final class DigiDexViewModel{
-        //    private (set) var AllDigimon: [Digimon] = []
-        //    private (set)var sagas:[Saga] = []
-        //    private (set)var loadErrors: String?
-        //
+ 
     
-    var searchText: String = ""
+    var searchsText: String = ""
     var selectLrvel: Set<DigimonLevel> = []
     
     
@@ -28,7 +25,7 @@ import Observation
     /// filtro que encaso de no haver nada selecionado devuelve todos los digimosn
     var filteredDigimon: [Digimon] {
         store.allDigimon.filter { digimon in
-            let matchSearchText = self.searchText.isEmpty || digimon.name.localizedCaseInsensitiveContains(self.searchText)
+            let matchSearchText = self.searchsText.isEmpty || digimon.name.localizedCaseInsensitiveContains(self.searchsText)
             let matchLevel = self.selectLrvel.isEmpty || self.selectLrvel.contains(digimon.level)
             return matchSearchText && matchLevel
         }

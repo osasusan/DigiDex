@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var viewModel : HomeViewModel
-    
-    init(store:DigimonStore){
-        
-        _viewModel = State(initialValue: HomeViewModel(store: store))
-    }
+    @Environment(HomeViewModel.self) private var viewModel
+  
     var body: some View {
         NavigationStack{
             ScrollView {
