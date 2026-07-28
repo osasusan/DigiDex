@@ -72,6 +72,7 @@ DigiDex/
 │       │   ├── LoginView.swift
 │       │   └── RegisterView.swift
 │       ├── Splash/
+│       │   └──SplashView.swift
 │       ├── mainTabView.swift
 │       └── Root.swift
 │
