@@ -5,9 +5,10 @@ Enciclopedia interactiva de Digimon para iPhone, iPad y Mac. Explora las sagas a
 ---
  
 ## Capturas de pantalla
- 
-> Añade aquí las capturas del simulador cuando las tengas.
- 
+
+<table> <tr> <td><img src="https://github.com/user-attachments/assets/4f8332c6-6e9a-498a-a9e1-c3705fc3f762" width="200"/></td> <td><img src="https://github.com/user-attachments/assets/2a478b8f-362b-4aa8-bde7-591002a4302a" width="200"/></td> <td><img src="https://github.com/user-attachments/assets/a495b979-e636-495f-a799-18370c41081b" width="200"/></td> <td><img src="https://github.com/user-attachments/assets/1b927688-23ba-40de-b1c6-2975f2e28759" width="200"/></td> </tr> <tr> <td align="center">Home</td> <td align="center">DigiDex</td> <td align="center">Favoritos</td> <td align="center">Perfil</td> </tr> </table>
+
+
 ---
  
 ## Stack tecnológico
@@ -18,7 +19,7 @@ Enciclopedia interactiva de Digimon para iPhone, iPad y Mac. Explora las sagas a
 | UI | SwiftUI (iOS 17+) |
 | Arquitectura | MVVM |
 | Estado | `@Observable` en ViewModels · `@Environment` en Views |
-| Datos (Fase 1) | JSON local + Assets Catalog |
+| Datos | JSON local + Assets Catalog |
 | Persistencia | UserDefaults |
 
 | Plataformas | iPhone · iPad · Mac |
