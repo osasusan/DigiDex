@@ -332,10 +332,25 @@
             "Growlmon"
         ],
         "evolvesTo": [
-            "Dukemon"
+            "Gallantmon"
         ]
     },
-    
+    {
+        "id": 20,
+        "name": "Gallantmon",
+        "level": "Mega",
+        "attribute": "Virus",
+        "type": "Holy Knight",
+        "description": "Forma Mega de Guilmon fusionado con su Tamer. Caballero real cubierto por la Sagrada Armadura Chrome Digizoid, empuña la lanza Gram y el escudo Aegis.",
+        "image": "gallantmon",
+        "weaknesses": [
+            "Oscuridad"
+        ],
+        "evolvesFrom": [
+            "WarGrowlmon"
+        ],
+        "evolvesTo": []
+    },
     {
         "id": 21,
         "name": "Terriermon",
@@ -659,7 +674,7 @@
         "weaknesses": [
             "Oscuridad"
         ],
-        "evolvesFrom": ["WarGrowlmon"],
+        "evolvesFrom": [],
         "evolvesTo": []
     },
     {

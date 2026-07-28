@@ -14,8 +14,6 @@ struct HomeView: View {
         
         _viewModel = State(initialValue: HomeViewModel(store: store))
     }
-
-  
     var body: some View {
         NavigationStack{
             ScrollView {

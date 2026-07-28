@@ -10,7 +10,7 @@ import PhotosUI
 
 
 struct ProfileView: View {
-    @Environment(AuthViewModel.self) var viewModel
+    @Environment(AuntentificacionViewModel.self) var viewModel
     
     @State private var edidtName: Bool = false
     @State private var newUsername: String = ""
@@ -33,11 +33,11 @@ struct ProfileView: View {
                         
                         ProfileOptionCard(title: "Cambiar nombre", isExpanded: $edidtName) {
                             VStack(spacing: 10) {
-                                TextField("Nuevo nombre",text: $newUsername)
+                                TextField("Nuevo nombre",text: $newPassword)
                                     .textFieldStyle(DigidexTextFieldStyle())
                                 Button {
                                     viewModel.updateProfile(username: newUsername)
-                                    newUsername = ""
+                                    newPassword = ""
                                     edidtName.toggle()
                                     
                                 } label: {
@@ -52,7 +52,7 @@ struct ProfileView: View {
                             VStack(spacing: 10) {
                                 SecureField("Nueva contraseña",text: $newPassword)
                                     .textFieldStyle(DigidexTextFieldStyle())
-                                SecureField("Confirmar contraseña",text: $confirmPassword)
+                                SecureField("Nueva contraseña",text: $confirmPassword)
                                     .textFieldStyle(DigidexTextFieldStyle())
                                 
                                 if let errorPass {
@@ -85,7 +85,6 @@ struct ProfileView: View {
                 .foregroundStyle(.digidexRed)
             }
             .navigationTitle("Perfil")
-            .background(.digidexBackground)
         }
     }
     var imageAvtar: some View {
@@ -115,18 +114,18 @@ struct ProfileView: View {
                 imageAvtar
             }
             .onChange(of: photoSelect) { _, newItem in
-                Task { @MainActor in
+                Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
                         viewModel.updateProfile(profileImageData: data)
                     }
                 }
             }
             
-            Text(viewModel.currentUser?.username ?? "pepito grillo")
+            Text(viewModel.currentUser?.username ?? "")
                 .font(.title3.bold())
                 .foregroundStyle(.white)
             
-            Text(viewModel.currentUser?.email ?? "digimon@Digidex.com")
+            Text(viewModel.currentUser?.email ?? "")
                 .font(.caption)
                 .fontWeight(.semibold)
                 .foregroundStyle(.digidexTextSecondary)
@@ -178,6 +177,6 @@ struct ProfileOptionCard<Content: View>: View {
     ZStack {
         Color.digidexBackground.ignoresSafeArea()
         ProfileView()
-            .environment(AuthViewModel())
+            .environment(AuntentificacionViewModel())
     }
 }

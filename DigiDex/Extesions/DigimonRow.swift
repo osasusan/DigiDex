@@ -48,7 +48,7 @@ extension Digimon {
         id: 3,
         name: "Agumon",
         level: .rookie,
-        attribute: .virus,
+        attribute: .vaccine,
         type: "Reptile",
         description: "Pequeño Digimon reptil con gran potencial evolutivo.",
         image: "agumon",

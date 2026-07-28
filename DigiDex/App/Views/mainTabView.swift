@@ -15,16 +15,14 @@ struct mainTabView: View {
         VStack(spacing:12){
             Group{
                 switch tabSelection {
-                case .home:
+                    case .home:
                     HomeView(store: store)
-                case .digidex:
-                    DigiDexView()
-                        .environment(DigiDexViewModel(store: store))
-                case .favorites:
-                    FavoritesView()
-                case .profile:
-                    ProfileView()
-                      
+                    case .digidex:
+                        DigiDexView()
+                    case .favorites:
+                        FavoritesView()
+                    case .profile:
+                        ProfileView()
                 }
                 
             }
@@ -33,12 +31,8 @@ struct mainTabView: View {
             
         }
         .background(Color.digidexBackground.ignoresSafeArea())
-        
+       
     }
-}
-#Preview{
-    mainTabView()
-        .environment(DigimonStore())
 }
 
 

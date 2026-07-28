@@ -11,13 +11,13 @@ import SwiftUI
 struct DigiDexApp: App {
     @State private var store:DigimonStore
     @State private var favorites :FavoriteViewModel
-    @State private var isAuthorized:AuthViewModel
+    @State private var isAuthorized:AuntentificacionViewModel
     
     init() {
         let store = DigimonStore()
         _store = State(initialValue: store)
         _favorites = State(initialValue: FavoriteViewModel(store: store))
-        _isAuthorized = State(initialValue: AuthViewModel())
+        _isAuthorized = State(initialValue: AuntentificacionViewModel())
     }
     var body: some Scene {
         WindowGroup {
