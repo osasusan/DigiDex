@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Root: View {
-    @Environment(AuntentificacionViewModel.self) private var auntVM
+    @Environment(AuthViewModel.self) private var auntVM
     @State private var isShowingSplash = true
     
     var body: some View {

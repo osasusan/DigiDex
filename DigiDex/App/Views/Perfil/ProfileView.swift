@@ -10,7 +10,7 @@ import PhotosUI
 
 
 struct ProfileView: View {
-    @Environment(AuntentificacionViewModel.self) var viewModel
+    @Environment(AuthViewModel.self) var viewModel
     
     @State private var edidtName: Bool = false
     @State private var newUsername: String = ""
@@ -178,6 +178,6 @@ struct ProfileOptionCard<Content: View>: View {
     ZStack {
         Color.digidexBackground.ignoresSafeArea()
         ProfileView()
-            .environment(AuntentificacionViewModel())
+            .environment(AuthViewModel())
     }
 }
