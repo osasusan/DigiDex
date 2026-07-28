@@ -9,7 +9,7 @@ import Foundation
 
 
 @MainActor
-@Observable final class AuntentificacionViewModel {
+@Observable final class AuthViewModel {
     
     var isAuthenticated = false
     var currentUser: UserModel?

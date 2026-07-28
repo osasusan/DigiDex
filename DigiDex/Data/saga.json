@@ -41,7 +41,7 @@
         "year": 2001,
         "featured": [
             { "digimonId": 17, "role": "protagonist", "order": 1 },
-            { "digimonId": 20, "role": "protagonist", "order": 2 },
+            { "digimonId": 40, "role": "protagonist", "order": 2 },
             { "digimonId": 21, "role": "protagonist", "order": 3 },
             { "digimonId": 24, "role": "protagonist", "order": 4 },
             { "digimonId": 25, "role": "protagonist", "order": 5 },
