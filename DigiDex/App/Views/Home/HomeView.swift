@@ -45,10 +45,10 @@ struct HomeView: View {
         }
     }
 }
-//#Preview {
-//    HomeView(store: .init())
-//        .environment(HomeViewModel())
-//}
+#Preview {
+    HomeView(store: DigimonStore())
+        .environment(HomeViewModel(store: DigimonStore()))
+}
 
 
 

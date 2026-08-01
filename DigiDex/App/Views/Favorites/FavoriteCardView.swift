@@ -28,5 +28,5 @@ struct FavoriteCardView: View {
 }
 
 #Preview {
-    FavoriteCardView(digimon : .previews)
+    FavoriteCardView(digimon : .previews1)
 }

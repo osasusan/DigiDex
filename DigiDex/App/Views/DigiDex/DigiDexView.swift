@@ -61,6 +61,7 @@ struct LevelFilterBar: View {
                         viewModel.toggleLevel(level: level)
                     }label: {
                         FilterPillView(text: level.rawValue, isSelected: viewModel.isSelcted(level: level))
+                        
                     }
                     .buttonStyle(.plain)
                 }

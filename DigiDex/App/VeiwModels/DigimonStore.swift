@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @MainActor
 @Observable final class DigimonStore{
@@ -30,7 +31,7 @@ import Foundation
         allDigimon.first { $0.id == id }
     }
     
-    func digimon(named name: String) -> Digimon? {
+     private func digimon(named name: String) -> Digimon? {
         allDigimon.first { $0.name == name }
     }
     

@@ -1,9 +1,9 @@
-    //
-    //  FavoritesView.swift
-    //  DigiDex
-    //
-    //  Created by Osasu sanchez on 21/07/2026.
-    //
+//
+//  FavoritesView.swift
+//  DigiDex
+//
+//  Created by Osasu sanchez on 21/07/2026.
+//
 
 import SwiftUI
 
@@ -11,8 +11,8 @@ struct FavoritesView: View {
     @Environment(FavoriteViewModel.self) private var vm
     
     private let columnas = [
-        GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible(), spacing: 10)
+        GridItem(.flexible(), spacing: 12),
+        GridItem(.flexible())
     ]
     
     
@@ -23,21 +23,18 @@ struct FavoritesView: View {
                     vacioFv()
                 }else {
                     ScrollView{
-                        LazyVGrid(columns: columnas, spacing: 10) {
+                        LazyVGrid(columns: columnas, spacing: 12) {
                             ForEach(vm.favoriteDigimon) { digimon in
                                 NavigationLink( value: digimon){
                                     FavoriteCardView(digimon: digimon)
                                 }
                                 .buttonStyle(.plain)
-                                
                             }
                         }
                         .padding(14)
-                        
                     }
                 }
             }
-            
             .background(Color.digidexBackground.ignoresSafeArea())
             .navigationBarTitle("Favoritos")
             .navigationDestination(for: Digimon.self) { digimon in
@@ -66,7 +63,6 @@ struct FavoritesView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(32)
-        
     }
 }
 

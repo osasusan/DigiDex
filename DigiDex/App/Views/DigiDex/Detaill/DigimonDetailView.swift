@@ -79,8 +79,6 @@ struct DigimonDetailView: View {
                 .font(.body)
                 .foregroundStyle(.white)
             
-                // Pequeño extra sobre la regla piedra-papel-tijera de atributos,
-                // ya que la app la modela en `DigimonAttribute.beats`.
             Text("\(digimon.attribute.rawValue) es fuerte contra \(digimon.attribute.beats.rawValue)")
                 .font(.caption)
                 .foregroundStyle(Color.digidexTextSecondary)
@@ -117,6 +115,14 @@ struct DigimonDetailView: View {
             }
         }
     }
+}
+
+#Preview {
+    let store = DigimonStore()
+    
+    DigimonDetailView( digimon: .previews1)
+        .environment(DigimonStore())
+        .environment(FavoriteViewModel(store: store))
 }
 
 

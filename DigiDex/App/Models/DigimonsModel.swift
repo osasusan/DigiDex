@@ -64,7 +64,7 @@ enum DigimonLevel: String, Codable, CaseIterable, Identifiable {
 }
 
     
-enum DigimonAttribute: String, Codable, CaseIterable, Identifiable {
+enum DigimonAttribute: String, Codable, CaseIterable {
     case vaccine = "Vaccine"
     case virus = "Virus"
     case data = "Data"
