@@ -14,6 +14,8 @@ struct HomeView: View {
         
         _viewModel = State(initialValue: HomeViewModel(store: store))
     }
+
+  
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -43,10 +45,10 @@ struct HomeView: View {
         }
     }
 }
-//#Preview {
-//    HomeView(store: .init())
-//        .environment(HomeViewModel())
-//}
+#Preview {
+    HomeView(store: DigimonStore())
+        .environment(HomeViewModel(store: DigimonStore()))
+}
 
 
 

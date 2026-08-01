@@ -10,13 +10,10 @@ import Observation
 
 @MainActor
 @Observable final class DigiDexViewModel{
-        //    private (set) var AllDigimon: [Digimon] = []
-        //    private (set)var sagas:[Saga] = []
-        //    private (set)var loadErrors: String?
-        //
+ 
     
-    var searchText: String = ""
-    var selectLrvel: Set<DigimonLevel> = []
+    var searchsText: String = ""
+    var selectLevel: Set<DigimonLevel> = []
     
     
     private let store: DigimonStore
@@ -28,21 +25,21 @@ import Observation
     /// filtro que encaso de no haver nada selecionado devuelve todos los digimosn
     var filteredDigimon: [Digimon] {
         store.allDigimon.filter { digimon in
-            let matchSearchText = self.searchText.isEmpty || digimon.name.localizedCaseInsensitiveContains(self.searchText)
-            let matchLevel = self.selectLrvel.isEmpty || self.selectLrvel.contains(digimon.level)
+            let matchSearchText = self.searchsText.isEmpty || digimon.name.localizedCaseInsensitiveContains(self.searchsText)
+            let matchLevel = self.selectLevel.isEmpty || self.selectLevel.contains(digimon.level)
             return matchSearchText && matchLevel
         }
     }
     func isSelcted(level: DigimonLevel) -> Bool {
-        selectLrvel.contains(level)
+        selectLevel.contains(level)
     }
     
     ///añado o quito filtord de busquedad de nivel 
     func toggleLevel(level: DigimonLevel) {
-        if selectLrvel.contains(level){
-            selectLrvel.remove(level)
+        if selectLevel.contains(level){
+            selectLevel.remove(level)
         }else{
-            selectLrvel.insert(level)
+            selectLevel.insert(level)
         }
     }
 }

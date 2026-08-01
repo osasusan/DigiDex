@@ -44,11 +44,11 @@ struct DigimonRow: View {
 }
 #if DEBUG
 extension Digimon {
-    static let previews = Digimon(
+    static let previews1 = Digimon(
         id: 3,
         name: "Agumon",
         level: .rookie,
-        attribute: .vaccine,
+        attribute: .virus,
         type: "Reptile",
         description: "Pequeño Digimon reptil con gran potencial evolutivo.",
         image: "agumon",
@@ -64,13 +64,13 @@ extension Digimon {
         Color.digidexBackground.ignoresSafeArea()
         VStack(spacing: 10) {
                 // Caso 1: lista DigiDex (sin rol)
-            DigimonRow(digimon: .previews)
+            DigimonRow(digimon: .previews1)
             
                 // Caso 2: Home saga protagonista
-            DigimonRow(digimon: .previews, showRole: .protagonist, imageSize: 40)
+            DigimonRow(digimon: .previews1, showRole: .protagonist, imageSize: 40)
             
                 // Caso 3: Home saga antagonista
-            DigimonRow(digimon: .previews, showRole: .antagonist, imageSize: 40)
+            DigimonRow(digimon: .previews1, showRole: .antagonist, imageSize: 40)
         }
         .padding()
         .background(Color.digidexCard)

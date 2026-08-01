@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @Environment(AuntentificacionViewModel.self) private var viewModel
+    @Environment(AuthViewModel.self) private var viewModel
     @Binding var showingRegister: Bool
     
     @State private var email: String = ""
@@ -68,5 +68,5 @@ struct RegisterView: View {
 
 #Preview {
     RegisterView(showingRegister: .constant(false))
-        .environment(AuntentificacionViewModel())
+        .environment(AuthViewModel())
 }

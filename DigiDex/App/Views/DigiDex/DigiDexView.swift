@@ -8,11 +8,73 @@
 import SwiftUI
 
 struct DigiDexView: View {
+    @Environment(DigiDexViewModel.self)private var viewModel
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        @Bindable var vm = viewModel
+        NavigationStack {
+            VStack(spacing: 8) {
+                
+                LevelFilterBar()
+                
+                if viewModel.filteredDigimon.isEmpty {
+                    Spacer()
+                    Text("No se encuentra ningun digimon")
+                        .font(.subheadline)
+                        .foregroundColor(.digidexTextSecondary)
+                    Spacer()
+                }else{
+                    ScrollView {
+                        LazyVStack(spacing: 10) {
+                            ForEach(viewModel.filteredDigimon) { digimon in
+                                NavigationLink(value: digimon){
+                                    DigimonRow(digimon: digimon)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal,10)
+            .background(Color.digidexBackground.ignoresSafeArea())
+            .navigationTitle(Text("DigiDex"))
+            .searchable(text: $vm.searchsText ,placement: .automatic,prompt: "Buscar Digimon")
+            .navigationDestination(for: Digimon.self) { digimon in
+                DigimonDetailView(digimon: digimon)
+            }
+        }
+    }
+}
+
+
+struct LevelFilterBar: View {
+    @Environment(DigiDexViewModel.self) private var viewModel
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 10) {
+                ForEach(DigimonLevel.orderedCases) { level in
+                    Button{
+                        viewModel.toggleLevel(level: level)
+                    }label: {
+                        FilterPillView(text: level.rawValue, isSelected: viewModel.isSelcted(level: level))
+                        
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(.horizontal,10)
+        }
     }
 }
 
 #Preview {
     DigiDexView()
+        .environment(DigiDexViewModel(store: DigimonStore()))
+}
+
+#Preview("Filtros"){
+    
+    LevelFilterBar()
+        .environment(DigiDexViewModel(store: DigimonStore()))
 }

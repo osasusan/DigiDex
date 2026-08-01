@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @Environment(AuntentificacionViewModel.self) private var viewModel
+    @Environment(AuthViewModel.self) private var viewModel
     @Binding var showLogin: Bool
     
     @State private var username: String = ""
@@ -86,7 +86,7 @@ struct DigidexTextFieldStyle: TextFieldStyle {
     ZStack {
         Color.digidexBackground.ignoresSafeArea()
         LoginView(showLogin: .constant(false))
-            .environment(AuntentificacionViewModel())
+            .environment(AuthViewModel())
             
     }
 }

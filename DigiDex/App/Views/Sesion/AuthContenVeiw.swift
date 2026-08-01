@@ -28,5 +28,5 @@ struct AuthContenVeiw: View {
 
 #Preview {
     AuthContenVeiw()
-        .environment(AuntentificacionViewModel())
+        .environment(AuthViewModel())
 }

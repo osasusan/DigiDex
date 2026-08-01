@@ -8,6 +8,7 @@
 import Foundation
 
 struct UserModel: Codable, Equatable {
+    var ID: UUID
     var username: String
     var email: String
     var passwordHash: String

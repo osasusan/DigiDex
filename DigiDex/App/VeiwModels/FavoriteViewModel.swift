@@ -12,12 +12,18 @@ import Foundation
     private(set)var favoriteIDs: Set<Int> = []
     
     private let store: DigimonStore
-    private let defaultKey = "digidex.favorite"
+    private var userID: String = ""
+    private var defaultKey :String{
+        "digidex.favorite\(userID)"
+    }
     
     init(store: DigimonStore) {
         self.store = store
-        loadFromDefaults()
         
+    }
+    func setCurrentUserID(_ iDs: UUID?) {
+        userID = iDs?.description ?? ""
+        loadFromFavorites()
     }
     var favoriteDigimon : [Digimon] {
         store.allDigimon.filter{favoriteIDs.contains($0.id)}
@@ -25,6 +31,7 @@ import Foundation
     func isFavorite(_ digimon: Digimon) -> Bool {
         favoriteIDs.contains(digimon.id)
     }
+    
     func toggleFavorite(_ digimon: Digimon) {
         if favoriteIDs.contains(digimon.id) {
             favoriteIDs.remove(digimon.id)
@@ -37,7 +44,7 @@ import Foundation
         UserDefaults.standard.set(favoriteIDs.sorted(), forKey: defaultKey)
     }
     
-    private func loadFromDefaults() {
+    private func loadFromFavorites() {
         let savedIDs = UserDefaults.standard.array(forKey: defaultKey) as? [Int] ?? []
         favoriteIDs = Set(savedIDs)
     }

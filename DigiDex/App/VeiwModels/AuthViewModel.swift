@@ -9,7 +9,7 @@ import Foundation
 
 
 @MainActor
-@Observable final class AuntentificacionViewModel {
+@Observable final class AuthViewModel {
     
     var isAuthenticated = false
     var currentUser: UserModel?
@@ -59,7 +59,7 @@ import Foundation
             return
         }
         
-        let newUser = UserModel(username: username, email: email, passwordHash: Self.hash(pass))
+        let newUser = UserModel( ID: UUID(), username: username, email: email, passwordHash: Self.hash(pass))
         user[username] = newUser
         saveRegisto(user)
         
