@@ -37,7 +37,7 @@ struct CardBackground_Previews: View {
                 .digidexCardStyle()
                 
         }
-        .padding()
+      
     }
 }
 

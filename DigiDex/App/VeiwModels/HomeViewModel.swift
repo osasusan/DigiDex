@@ -11,7 +11,7 @@ import Foundation
 
 @Observable final class HomeViewModel {
     
-    var sagasExpansID : Int?
+    private var sagasExpansID : Int?
     private let store :DigimonStore
     
     init(store: DigimonStore){

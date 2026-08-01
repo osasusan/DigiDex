@@ -26,6 +26,12 @@ struct DigiDexApp: App {
                 .environment(favorites)
                 .environment(isAuthorized)
                 .preferredColorScheme(.dark)
+            
+                .onChange(of: isAuthorized.currentUser?.ID){ _, newUserID in
+                    favorites.setCurrentUserID(newUserID)
+                        
+                    
+                }
         }
     }
 }

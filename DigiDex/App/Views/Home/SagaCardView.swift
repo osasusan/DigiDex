@@ -19,15 +19,19 @@ struct SagaCardView: View {
             Rectangle()
                 .fill(saga.accentColor)
                 .frame(width: 4)
-
-            VStack(alignment: .leading, spacing: 0) {
-                header
-
-                if isExpanded {
-                    featuredList
-                        .padding(.leading, 20)
-                        .padding(.trailing, 16)
-                        .padding(.bottom, 16)
+            ZStack(alignment: .trailing) {
+                Rectangle()
+                    .fill(saga.accentColor)
+                    .frame(width: 4)
+                VStack(alignment: .leading, spacing: 0) {
+                    header
+                    
+                    if isExpanded {
+                        featuredList
+                            .padding(.leading, 20)
+                            .padding(.trailing, 16)
+                            .padding(.bottom, 16)
+                    }
                 }
             }
         }
@@ -69,7 +73,7 @@ struct SagaCardView: View {
         VStack(spacing: 8) {
             ForEach(Array(featuredEntries.enumerated()), id: \.element.digimon.id) { index, entry in
                 NavigationLink(value: entry.digimon) {
-                  
+                    
                     DigimonRow(digimon: entry.digimon, showRole: entry.featured.role, imageSize: 52)
                 }
                 .buttonStyle(.plain)
@@ -80,5 +84,6 @@ struct SagaCardView: View {
         }
     }
 }
+
 
 
