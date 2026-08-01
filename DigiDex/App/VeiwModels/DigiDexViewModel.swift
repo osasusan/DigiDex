@@ -13,7 +13,7 @@ import Observation
  
     
     var searchsText: String = ""
-    var selectLrvel: Set<DigimonLevel> = []
+    var selectLevel: Set<DigimonLevel> = []
     
     
     private let store: DigimonStore
@@ -26,20 +26,20 @@ import Observation
     var filteredDigimon: [Digimon] {
         store.allDigimon.filter { digimon in
             let matchSearchText = self.searchsText.isEmpty || digimon.name.localizedCaseInsensitiveContains(self.searchsText)
-            let matchLevel = self.selectLrvel.isEmpty || self.selectLrvel.contains(digimon.level)
+            let matchLevel = self.selectLevel.isEmpty || self.selectLevel.contains(digimon.level)
             return matchSearchText && matchLevel
         }
     }
     func isSelcted(level: DigimonLevel) -> Bool {
-        selectLrvel.contains(level)
+        selectLevel.contains(level)
     }
     
     ///añado o quito filtord de busquedad de nivel 
     func toggleLevel(level: DigimonLevel) {
-        if selectLrvel.contains(level){
-            selectLrvel.remove(level)
+        if selectLevel.contains(level){
+            selectLevel.remove(level)
         }else{
-            selectLrvel.insert(level)
+            selectLevel.insert(level)
         }
     }
 }

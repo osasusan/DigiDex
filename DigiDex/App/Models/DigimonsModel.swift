@@ -8,16 +8,13 @@
 
 import SwiftUI
 
-   
+/// Modelo principal de la app. Representa una ficha completa de Digimon
 
-    /// Modelo principal de la app. Representa una ficha completa de Digimon
-    /// tal y como viene descrita en Resources/digimon.json.
-    ///
-    /// - `evolvesFrom` / `evolvesTo` guardan NOMBRES de Digimon (no ids), tal como
-    ///   vienen en el JSON. Es el ViewModel el que resuelve esos nombres a objetos
-    ///   `Digimon` completos cuando el usuario navega a esa ficha.
-    /// - Es `Hashable` porque `NavigationStack` necesita poder usarlo como valor
-    ///   dentro del `NavigationPath` para la navegación recursiva entre fichas.
+/// - `evolvesFrom` / `evolvesTo` guardan NOMBRES de Digimon (no ids), tal como
+///   vienen en el JSON. Es el ViewModel el que resuelve esos nombres a objetos
+///   `Digimon` completos cuando el usuario navega a esa ficha.
+/// - Es `Hashable` porque `NavigationStack` necesita poder usarlo como valor
+///   dentro del `NavigationPath` para la navegación recursiva entre fichas.
 
 struct Digimon: Codable, Identifiable, Hashable {
     let id: Int

@@ -14,8 +14,7 @@ struct DigiDexView: View {
     var body: some View {
         @Bindable var vm = viewModel
         NavigationStack {
-            
-            VStack(spacing: 10) {
+            VStack(spacing: 8) {
                 
                 LevelFilterBar()
                 
@@ -37,12 +36,10 @@ struct DigiDexView: View {
                     }
                 }
             }
-            
-            .padding(.horizontal,15)
-            .padding(.top,10)
+            .padding(.horizontal,10)
             .background(Color.digidexBackground.ignoresSafeArea())
             .navigationTitle(Text("DigiDex"))
-            .searchable(text: $vm.searchsText ,prompt: "Buscar Digimon")
+            .searchable(text: $vm.searchsText ,placement: .automatic,prompt: "Buscar Digimon")
             .navigationDestination(for: Digimon.self) { digimon in
                 DigimonDetailView(digimon: digimon)
             }
